@@ -82,8 +82,8 @@ X = [ones(m, 1) X];
 fprintf('Running gradient descent ...\n');
 
 % Choose some alpha value
-alpha = 0.01;
-num_iters = 400;
+alpha = 0.01; % original 0.01
+num_iters = 800; %original 400
 
 % Init Theta and Run Gradient Descent 
 theta = zeros(3, 1);
@@ -111,7 +111,7 @@ test = [1650 2];
 % normalize the test data
 test_norm = (test-mu)./sigma;
 
-% add 1 to the first column of matrix
+% add 1 to the first column of matrix for intercept 
 test_norm_one = [1, test_norm];
 
 % multiple test data by theta to find the prodicted value of house
